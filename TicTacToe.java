@@ -52,6 +52,12 @@ public class TicTacToe {
         return new int[]{row, col};
     }
 
+    public static boolean isValidMove(int row, int col) {
+        return row >= 0 && row < 3 &&
+               col >= 0 && col < 3 &&
+               board[row][col] == '-';
+    }
+
     public static void main(String[] args) {
         initializeBoard();
         toss();
