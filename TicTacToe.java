@@ -1,3 +1,4 @@
+import java.util.Scanner;
 import java.util.Random;
 
 public class TicTacToe {
@@ -37,6 +38,12 @@ public class TicTacToe {
             userTurn = false;
             System.out.println("Computer won toss");
         }
+    }
+
+    public static int userInput() {
+        Scanner sc = new Scanner(System.in);
+        System.out.print("Enter position (1-9): ");
+        return sc.nextInt();
     }
 
     public static void main(String[] args) {
