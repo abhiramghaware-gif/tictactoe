@@ -46,6 +46,12 @@ public class TicTacToe {
         return sc.nextInt();
     }
 
+    public static int[] getPosition(int position) {
+        int row = (position - 1) / 3;
+        int col = (position - 1) % 3;
+        return new int[]{row, col};
+    }
+
     public static void main(String[] args) {
         initializeBoard();
         toss();
