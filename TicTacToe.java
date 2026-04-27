@@ -58,6 +58,10 @@ public class TicTacToe {
                board[row][col] == '-';
     }
 
+    public static void placeMove(int row, int col, char symbol) {
+        board[row][col] = symbol;
+    }
+
     public static void main(String[] args) {
         initializeBoard();
         toss();
