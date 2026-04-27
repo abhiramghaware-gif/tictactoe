@@ -62,6 +62,20 @@ public class TicTacToe {
         board[row][col] = symbol;
     }
 
+    public static void computerMove() {
+        Random random = new Random();
+
+        while (true) {
+            int position = random.nextInt(9) + 1;
+            int[] pos = getPosition(position);
+
+            if (isValidMove(pos[0], pos[1])) {
+                placeMove(pos[0], pos[1], computerSymbol);
+                break;
+            }
+        }
+    }
+
     public static void main(String[] args) {
         initializeBoard();
         toss();
